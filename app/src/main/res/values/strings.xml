@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <integer name="inputA">0</integer>
+    <integer name="inpitB">0</integer>
+
+
+</resources>
