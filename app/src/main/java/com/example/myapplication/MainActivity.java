@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.btnDivide:
                         userResult.append("/");
                         isFunctionalButtonPressed = true;
-                        currentOperation = "/";
+                        currentOperation = "\\/";
                         break;
                     case R.id.btnMultiply:
                         userResult.append("X");
@@ -99,12 +99,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.btnMinus:
                         userResult.append("-");
                         isFunctionalButtonPressed = true;
-                        currentOperation = "-";
+                        currentOperation = "\\-";
                         break;
                     case R.id.btnPlus:
                         userResult.append("+");
                         isFunctionalButtonPressed = true;
-                        currentOperation = "+";
+                        currentOperation = "\\+";
                         break;
                     case R.id.btnEqual:
                         String calculateThis = userResult.getText().toString();
@@ -142,6 +142,8 @@ public class MainActivity extends AppCompatActivity {
 
     private String calculateResult(String calculateThis) {
         System.out.println(currentOperation);
+        System.out.println(calculateThis);
+
         String[] parts = calculateThis.split(currentOperation);
         String part1 = parts[0];
         String part2 = parts[1];
@@ -150,13 +152,13 @@ public class MainActivity extends AppCompatActivity {
         double resultDouble = 0;
         String result = "";
 
-        if(currentOperation == "+"){
+        if(currentOperation == "\\+"){
            resultDouble = valueA + valueB;
-        } else if (currentOperation == "-") {
+        } else if (currentOperation == "\\-") {
             resultDouble = valueA - valueB;
         }else if (currentOperation == "X") {
             resultDouble = valueA * valueB;
-        }else if (currentOperation == "/") {
+        }else if (currentOperation == "\\/") {
             resultDouble = valueA / valueB;
         }
 
